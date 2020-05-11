@@ -17,7 +17,7 @@ Importar o ficheiro 'customer-management.postman_collection', presente na raíz 
 # Especificação da API
 
 ## Adicionar um novo cliente
-
+### Nota: O ficheiro add-customer.json está disponível na raíz do projeto, o comando curl deverá de ser executado na raíz do mesmo.
 ### Pedido
 `POST /customers`
 ```
