@@ -11,6 +11,8 @@ Executar o seguinte comando na raíz do projeto.
 ```
 $ mvn wildfly:run
 ```
+# Testes Funcionais
+Importar o ficheiro 'customer-management.postman_collection', presente na raíz do projeto para a aplicação Postman.
 
 # Especificação da API
 
