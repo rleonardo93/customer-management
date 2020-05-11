@@ -1,6 +1,11 @@
 # customer-management
 O exercício consiste no desenvolvimento de um protótipo de um sistema de gestão online de dados de clientes baseado nas tecnologias utilizadas na **MULTICERT**.
 
+# TODO
+- Tratamento de excepções
+- Definir o tipo de mídia MIME (Consumes, Produces) para os pedidos e respostas
+- Definir e executar testes unitários com mock objects
+
 # Execução da Aplicação
 Executar o seguinte comando na raíz do projeto.
 ```
