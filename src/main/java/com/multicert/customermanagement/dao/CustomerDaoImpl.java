@@ -19,15 +19,15 @@ public class CustomerDaoImpl implements CustomerDao {
     private SessionFactory sessionFactory;
 
     @Override
-    public void save(Customer customer) {
-        sessionFactory.getCurrentSession().save(customer);
+    public long save(Customer customer) {
+        sessionFactory.getCurrentSession().saveOrUpdate(customer);
+        return customer.getId();
     }
 
     @Override
     public Customer get(long id) {
         Customer customer = sessionFactory.getCurrentSession().get(Customer.class, id);
         Hibernate.initialize(customer.getAddresses());
-
         return customer;
     }
 
@@ -54,7 +54,6 @@ public class CustomerDaoImpl implements CustomerDao {
         Session session = sessionFactory.getCurrentSession();
         Query query = session.createQuery("SELECT c FROM Customer c JOIN FETCH c.addresses WHERE c.name like :name", Customer.class);
         query.setParameter("name", "%"+name+"%");
-
         return new HashSet<Customer>(query.getResultList());
     }
 
@@ -63,7 +62,6 @@ public class CustomerDaoImpl implements CustomerDao {
         Session session = sessionFactory.getCurrentSession();
         Query query = session.createQuery("SELECT c FROM Customer c JOIN FETCH c.addresses child WHERE child.city=:city", Customer.class);
         query.setParameter("city", city);
-
         return new HashSet<Customer>(query.getResultList());
     }
 

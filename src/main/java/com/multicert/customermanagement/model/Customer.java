@@ -24,7 +24,7 @@ public class Customer {
 
     private int nif;
 
-    @OneToMany(cascade=CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "customer_fk")
     private List<Address> addresses = new ArrayList<>();
 
@@ -66,16 +66,5 @@ public class Customer {
 
     public void setAddresses(List<Address> addresses) {
         this.addresses = addresses;
-    }
-
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", nif=" + nif +
-                ", addresses=" + addresses +
-                '}';
     }
 }

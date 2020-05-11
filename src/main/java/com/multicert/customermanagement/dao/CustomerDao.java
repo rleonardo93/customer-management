@@ -1,12 +1,11 @@
 package com.multicert.customermanagement.dao;
 
-import com.multicert.customermanagement.model.Address;
 import com.multicert.customermanagement.model.Customer;
 
 import java.util.Set;
 
 public interface CustomerDao {
-    void save(Customer customer);
+    long save(Customer customer);
 
     Customer get(long id);
 

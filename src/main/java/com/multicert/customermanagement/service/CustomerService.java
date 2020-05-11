@@ -1,13 +1,12 @@
 package com.multicert.customermanagement.service;
 
-import com.multicert.customermanagement.model.Address;
 import com.multicert.customermanagement.model.Customer;
 
 import java.util.Set;
 
 public interface CustomerService {
 
-    void save(Customer customer);
+    long save(Customer customer);
 
     Customer get(long id);
 

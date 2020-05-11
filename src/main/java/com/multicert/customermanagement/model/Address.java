@@ -69,15 +69,4 @@ public class Address {
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
-
-    @Override
-    public String toString() {
-        return "Address{" +
-                "id=" + id +
-                ", address='" + address + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", city='" + city + '\'' +
-                ", customer=" + customer +
-                '}';
-    }
 }
