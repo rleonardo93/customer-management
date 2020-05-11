@@ -1,0 +1,17 @@
+{
+  "name": "Ruben",
+  "phoneNumber": "+351917070707",
+  "nif": "11111110",
+  "addresses": [
+    {
+      "address": "Rua Principal Nº1",
+      "zipCode": "2300-001",
+      "city": "Cidade1"
+    },
+    {
+      "address": "Rua Principal Nº2",
+      "zipCode": "2300-002",
+      "city": "Cidade2"
+    }
+  ]
+}
